@@ -1,0 +1,235 @@
+<homecontent>
+</homecontent>
+
+<datacontent>
+		<div class='hide-this'>
+			<h1><button class='btn2' id='testing-area'>Testing Area</button></h1>
+			<hr>
+		</div>
+		
+		<div class='col-36 hide-then-show'>
+			<div id="heading" class='btn center'> </div>
+			<canvas id="canvas-compas">
+			</canvas>
+		</div>
+
+		<div class='col-3 hide-then-show' id='directions-in-words-window'>
+			<div id="left-right-straight-window" class='center btn'></div>
+			<div id="and-window" class='center btn'></div>
+			<div id="braking-accelerating-in-words" class='center btn'></div>
+			<video height="160px" width="100%" src="../videos/Flagstaff1.webm" controls>
+			Your browser can not play this video
+			</video>
+		</div>
+
+		<div class='col-36 hide-then-show'>
+					<div id="speed-in-mph-window" class='btn center'></div>
+					<canvas id="canvas-wheel">
+					</canvas>
+				</div>
+
+		<div class='col-half hide-then-show'></div>
+
+		<div class='col-2 button-panel-right' id='button-panel'>
+			<input type="file" id="files" class='btn' name="file"></input>
+			<span class="readBytesButtons">
+  				<button class='btn'>Show File</button>
+			</span>
+				<div id="byte_range"></div>
+				<div id="byte_content"></div>
+			<hr>
+			<div><button class='btn hide-this' id='show-all-data-button'>Demo All Data</button></div>
+			<div><button class='btn' id='report-button'>Show My Report</button></div>
+			<div><button class='btn' id='freeze-button'>Pause Stream</button></div>
+			<div><button class='btn' id='reset-button'>Reset</button></div>
+			<span class="readBytesButtons"></span>
+
+
+<style>
+  #byte_content {
+    margin: 5px 0;
+    max-height: 100px;
+  }
+  #byte_range { margin-top: 5px; }
+</style>
+
+<script>
+  function readBlob() {
+
+    var files = document.getElementById('files').files;
+    if (!files.length) {
+      alert('Please select a file!');
+      return;
+    }
+
+    var file = files[0];
+    var start = 0;
+    var stop = file.size - 1;
+
+    var reader = new FileReader();
+
+    // If we use onloadend, we need to check the readyState.
+    reader.onloadend = function(evt) {
+      if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+        document.getElementById('byte_content').textContent = evt.target.result;
+        document.getElementById('byte_range').textContent = 
+            ['Read bytes: ', start + 1, ' - ', stop + 1,
+             ' of ', file.size, ' byte file'].join('');
+      }
+    };
+
+    var blob = file.slice(start, stop + 1);
+    reader.readAsBinaryString(blob);
+  }
+  
+  document.querySelector('.readBytesButtons').addEventListener('click', function(evt) {
+    if (evt.target.tagName.toLowerCase() == 'button') {
+      readBlob();
+    }
+  }, false);//THANKYOU ANDREW J FOR THIS SNIPPET
+</script>
+
+</div>
+
+
+
+<div class='col-3 hide-this'></div>
+
+<div class='col-2 hide-this' id='parameter-input-column'>
+	<form id='parameter-input-fields' action="data_plot.html" method="POST">
+  <div class='center'>
+  	<div class='btn center' id='set-parameters-window'>Set Values Below</div>
+  	<hr>
+  	<input placeholder='Start Time' type='text' name='name' class='btn param-inputs' id='testing-input-start-point'></input>
+  	<input placeholder='End Time' type='text' name='name' class='btn param-inputs' id='testing-input-end-point'></input>
+  	<input placeholder='MultiX Visuals' type='text' name='multix' class='btn param-inputs' id='testing-input-multix'></input>
+  	<input placeholder='MultiY Visuals' type='text' name='name' class='btn param-inputs' id='testing-input-multiy'></input>
+  	<input placeholder='MultiZ Visuals' type='text' name='name' class='btn param-inputs' id='testing-input-multiz'></input>
+  	<input placeholder='Skip Data Points' type='text' name='name' class='btn param-inputs' id='testing-input-data-points'></input>
+  	<input placeholder='Report Trip X' type='text' name='name' class='btn param-inputs' id='testing-input-redline-x'></input>
+  	<input placeholder='Report Trip Y' type='text' name='name' class='btn param-inputs' id='testing-input-redline-y'></input>
+  	<input placeholder='Report Trip Z' type='text' name='name' class='btn param-inputs' id='testing-input-redline-z'></input>
+  	<input placeholder='Stabilizer Visuals' type='text' name='name' class='btn param-inputs' id='testing-input-data-stabilizer'></input>
+  	<input placeholder='Stabilizer Words' type='text' name='name' class='btn param-inputs' id='testing-input-words-stabilizer'></input>
+  	<input placeholder='Stabilizer Data' type='text' name='name' class='btn param-inputs' id='testing-input-data-stabilizer-data'></input>
+
+  	<textarea placeholder='File Contents' type='text-area' name='name' class='btn param-inputs' id='testing-input-file-contents'>
+  </textarea>
+  	<input type='submit' value='Load Profile' class='btn' id='parameter-input-submit-button'></input>
+  	<button class='btn center' id='run-program-button'>Run Program</button>
+  </div>
+	</form>
+	<!-- <div class='btn center'> -->
+  <!-- </div> -->
+</div>
+
+<div class='col-3 hide-this'></div>
+
+<div class='col-1 col-right hide-this'>
+	<div class='right'>
+	<button class='btn shadow-r' id='instructions-button'>Instructions</button>
+	<a href="./index.html" class="btn home-fixed center shadow-r" id='home-button'>Home</a>
+</div>
+</div>
+
+  	
+
+<div class="col-12"></div>
+
+	<div class='col-3 hide-then-show' id='col-carmodelback'>
+			<div id="time-window" class='btn'></div>
+			<div id="sound-level-window" class='btn'></div>
+			<div id="altitude-window" class='btn'></div>
+		<hr>
+		<canvas id="car-model-back" class='col-md-8'>
+		</canvas>
+		
+			<div id="x-axis-window" class='btn' ></div>
+			<div id="y-axis-window" class='btn' ></div>
+			<div id="z-axis-window" class='btn' ></div>
+			<div id="data-points-window" class='btn' ></div>
+		
+	</div>
+
+		<div class='col-9'>
+			<canvas id="canvas">
+			</canvas>
+		</div>
+
+</datacontent>
+
+
+<reportcontent>
+	<button class='btn' id='data-page'>Take Me Back To The Testing Area</button>
+	<button class='btn'>Export Data</button>
+	<hr>
+	<div class='col-5'>
+		<div id='all-errors-switching'></div>
+		<div id='text-div-crash' class='space'></div>
+		<div id="text-div-airborne" class='space'></div>
+		<div id="text-div-bump" class="space"></div>
+		<div id="sound-warning-message" class="space"></div>
+		<div id="text-div-braking-and-cornering" class="space"></div>
+		<div id="text-div-acceleration-and-cornering" class="space"></div>
+		<div id="text-div-hard-left" class="space"></div>
+		<div id="text-div-hard-right" class="space"></div>	
+		<div id="text-div-heavy-braking" class="space"></div>
+		<div id="text-div-heavy-acceleration" class="space"></div>
+		<div id="text-div-good-driver" class="space"></div>
+		<b><div class='btn' id="highest-all-axes-window"></div></b>
+		<canvas id="canvas-reportcontent">
+		</canvas>
+	</div>
+	<div class='col-7'>
+		<div class='btn center' id='canvas-accelerometer-label'>Accelerometer</div>
+		<canvas id='canvas-gball'>
+		</canvas>
+	</div>
+</reportcontent>
+
+<instructionscontent>
+	<div class='col-7 courier-font'>
+		<button class='btn' id='data-page2'>Take Me Back To The Testing Area</button>
+		<hr>
+		<h4><strong><p>Currently in development. Gearbox is a car metrics application that allows you to interpret drving and location data gathered from various sensors on your smartphone. Weather it's fast lap times you're after, new driver saftey concers or maybe you're just curious, Gearbox is a fun and accurate way for you to see what's on your cars mind. 
+		To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'</p>
+		<p>OR, play with the data:</p>
+		<p>Input fields are able to accept user defined values for the function parameters (outlined below). Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  Click 'Show My Report' to see the data being logged that relates to your 'Report Trip' inputs, and at any time you may pause or reload the data stream. User CSV upload is currently under construction, but will be functional again shortly. If you forget how to log the data from your handset first, refer back to the readme in the program folder.</p>
+		
+		<p>User Defined Parameters:</p>
+		<p><input class='btn' placeholder='Start Time'></input>
+		Default: 0 - Start time in milliseconds.</p>
+		<p><input class='btn' placeholder='End Time'></input>
+		Default: 18000 - End time in milliseconds.</p>
+		<p><input class='btn' placeholder='MultiX Visuals'></input>
+		Default: 60 - The ammount of movement present in the images that correspond to the X axis of the accelerometer. (left and right latteral)</p>
+		<p><input class='btn' placeholder='MultiY Visuals'></input>
+		Default: 60 - The ammount of movement present in the images that correspond to the Y axis of the accelerometer. (braking and acceleration)</p>
+		<p><input class='btn' placeholder='MultiZ Visuals'></input>
+		Default: 2 - The ammount of movement present in the images that correspond to the Z axis of the accelerometer. (up and down, bumps and dips)</p>
+		<p><input class='btn' placeholder='Skip Data Points'></input>
+		Default: 1 - This will cause the application to interpret only every N'th data point, while allowing the information to continue to be presented without distorting time. (larger files, slower computers)</p>
+		<p><input class='btn' placeholder='Report Trip X'></input>
+		Default: 2 - The number N entered represents N meters/second^2. When the force in the X direction (lateral force on the car) exceeds this number, the data will be dynamically printed in the 'Show My Report' section. Certain images related to turning and lateral force will also become red.</p>
+		<p><input class='btn' placeholder='Report Trip Y'></input>
+		Default: 3 - Report Trip Y: The number N entered represents N meters/second^2.  When the force in the Y direction (braking and acceleration) exceeds this number, the the data will be dynamically printed in the "Show My Report" section.  Certain images related to braking will also become red. </p>
+		<p><input class='btn' placeholder='Report Trip Z'></input>
+		Default: 12 - Report Trip Z: The number N entered represents N meters/second^2.  When the force in the Z direction (bumps and dips) exceeds this number, the data will be dynamically printed in the "Show My Report" section. Certain images related to bumps and dips will also become red.</p>
+		<p><input class='btn' placeholder='Stabilizer Visuals'></input>
+		Default: 1 - The sensors on your smartphone are extremely sensitive. As a result, the different respresentations of the data can appear to be very jerky, and in some cases difficult to read or interpret.  The higher the number entered into this field, the more stable the graphic respresentations (car and orientation drawings) of the data become.  Although a higher number will produce 'cleaner' results, the data will be slightly less accurate as the number increases.  Certain data including time, speed, and location will not be affected. Recommend less than 50.</p>
+		<p><input class='btn' placeholder='Stabilizer Words'></input>
+		Default: 1 - The higher the number entered into this field, the more stable the word print-outs become('driving straight' etc).  Recommend less than 50.</p>
+		<p><input class='btn' placeholder='Stabilizer Data'></input>
+		Default: 1 - The higher the number entered into this field, the more stable the data print-outs become(X, Y, Z accelerometer data etc).  Recommend less than 50.</p>
+
+		<p><input value='Load Profile' class='btn'></input>
+		Push this button after entering your custom parameters.  If any fields are left blank, they will use the default values so you may pick and choose which custom parameters you would like to test with</p>
+  		<p><button class='btn center' id='run-program-button'>Run Program</button>
+  		This will run the program</p>
+		<p>The demo data presented was previously logged by myself but you may import your own data, or set your own parameters for the default demo data. :)</p></strong>
+		<p>Have fun, Chase Terzian</p></h4>
+		<hr>
+
+	</div>
+
+</instructionscontent>
