@@ -1,28 +1,156 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+WARNING: Use with Chrome
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Currently in development: Gearbox is a car metrics application that allows you to interpret drving and location data gathered from various sensors in your smartphone. Weather it's fast lap times you're after, new driver saftey concers you have, or perhaps you're just curious, Gearbox is a fun and accurate way for you to see what's on your cars mind.
+
+1 - Clone the app
+
+2 - Navigate to the 'Gearbox' folder and open
+
+3 - Double click on the 'Gearbox' Icon to start the app
+
+***Gathering your own data requires a download from the Google Play Store onto your Android handset. To skip this process for now, go to the instructions after the horizontal line (below) and you will see information about how to activate the demo.***
+
+4 - Download AndroSensor (one time setup)
+
+5 - Go to settings and scroll down to Active Sensors.  Uncheck BATTERY STATUS, GPS NMEA $GPGGA, and GPS NMEA*, click ok.
+
+6 - Set Distance Unit to imperial
+
+7 - Set Location to n.n N/S - e.e W/E
+
+8 - Set Speed Unit to miles per hour
+
+9 - Set Sound Level Calibration to 80 dB
+
+10 - Set File Format to CSV, and check the comma box
+
+11 - Select destination for the file to be saved (email handset etc.)
+
+12 - Exit settings
+
+13 - Pressing the down arrow next to the wrench at the top of the app will open a small side window that allows you to start logging data.  Place the handset on a flat and secure (enough) surface so it doesn't move around, and start logging data when ready.
+
+14 - Upload CSV file (and optional video) to Gearbox and have fun! 
+
+NOTE: email chaseterzian@gmail.com with support requests for different data logging apps
+____________________________________________________________________________________________________________
+
+To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'. If you get stuck, see 'Instructions' located at the top right side of the 'Testing Area' after you enter the garage.
+
+OR play with the data:
+
+The input fields in the middle of the screen are able to accept user defined parameter values, which are outlined in the 'Instructions' section. Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  At any time you may pause or reload the data stream. You can also click 'Show My Report' to see the data being logged that relates to your 'Report Trip' inputs. User CSV upload is currently under construction, but will be functional again shortly. See 'Instructions' located at the top right side of the 'Testing Area' for further information.
+
+Available Sensor Data:
+_____________________
+
+0 - ACCELEROMETER X (m/s²)
+-0.1513
+
+1 - ACCELEROMETER Y (m/s²)
+-0.3475
+
+2 - ACCELEROMETER Z (m/s²)
+9.9794
+
+3 - GRAVITY X (m/s²)
+-0.0926
+
+4 - GRAVITY Y (m/s²)
+-0.3462
+
+5 - GRAVITY Z (m/s²)
+9.8001
+
+6 - LINEAR ACCELERATION X (m/s²)
+-0.071
+
+7 - LINEAR ACCELERATION Y (m/s²)
+-0.0628
+
+8 - LINEAR ACCELERATION Z (m/s²)
+-0.0265
+
+9 - GYROSCOPE X (°/s)
+-0.34
+
+10 - GYROSCOPE Y (°/s)
+0.18
+
+11 -  GYROSCOPE Z (°/s)
+1.63
+12 - LIGHT (lux)
+15071.0
+
+13 - MAGNETIC FIELD X (μT)
+122.0
+
+14 - MAGNETIC FIELD Y (μT)
+77.46
+
+15 - MAGNETIC FIELD Z (μT)
+91.8
+
+16 - ORIENTATION Z (azimuth °)
+303.16
+
+17 - ORIENTATION X (pitch °)
+2.03
+
+18 - ORIENTATION Y (roll °)
+0.45
+
+19 - PROXIMITY (i)
+2.0
+
+20 -ATMOSPHERIC PRESSURE (hPa)
+812.3
+
+21 - SOUND LEVEL (dB)
+48.297
+
+22 - LOCATION Latitude :
+40.034935
+
+23 - LOCATION Longitude :
+-105.34338
+
+24 - LOCATION Altitude ( m)
+5932.26
+
+25 - LOCATION Altitude-google ( m)
+NaN
+
+26 - LOCATION Altitude-atmospheric pressure ( m)
+,
+
+27 - LOCATION Speed ( Mph)
+5.62
+
+28 - LOCATION Accuracy ( m)
+41.935486
+
+29 - LOCATION ORIENTATION (°)
+112.4
+
+30 - Satellites in range
+15 / 25
+
+31 - Time since start in ms
+444
+
+32 - YYYY-MO-DD
+
+33 - HH-
+
+34 - MI-
+
+35 - SS_
+
+36 - SSS
+
+Fiv Asim, developer of AndroSensor
+http://www.superiorwallpapers.com/ for the Testing Area image
+http://www.lughertexture.com for the landing area image
+(Powered By Android:)
