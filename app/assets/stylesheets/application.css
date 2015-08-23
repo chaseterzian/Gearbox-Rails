@@ -389,7 +389,7 @@ canvas {
   width: 100%;
 }
 #canvas-testing {
-  height: auto%;
+  height: auto;
   width: 100%;
 }
 
@@ -415,4 +415,3 @@ button{
   top: 3%;
   right: 75;
 }
-*/*/*/*/*/*/
