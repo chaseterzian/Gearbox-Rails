@@ -385,7 +385,7 @@ h1{
 }
 
 canvas {
-  height: auto%;
+  height: auto;
   width: 100%;
 }
 #canvas-testing {
