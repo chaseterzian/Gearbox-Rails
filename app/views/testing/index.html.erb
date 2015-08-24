@@ -17,9 +17,7 @@
 			<div id="left-right-straight-window" class='center btn'></div>
 			<div id="and-window" class='center btn'></div>
 			<div id="braking-accelerating-in-words" class='center btn'></div>
-			<video height="160px" width="100%" src="./images/Flagstaff1.webm" controls>
-			Your browser can not play this video
-			</video>
+			<%= video_tag(["Flagstaff1.webm"], :size => "320x240", :controls => true) %>
 		</div>
 
 		<div class='col-36 hide-then-show'>
