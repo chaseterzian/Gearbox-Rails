@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'landing#index'
+  root 'garage#index'
   resources :testing
+
 
 end

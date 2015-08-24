@@ -25,23 +25,6 @@ video{
   position: center;
 }
 
-.bgpic {
-  background-image: url("../images/garage.jpg");
-  background-width: 100%;
-  background-height: 100%;
-  background-repeat: no-repeat;
-  /*background-size: 100%;*/
-  /*position: absolute;*/
-  /*background-position: center;*/
-  background-position: 0px 0px;
-  /*background-image: url("../images/ferrariGarage.jpg");
-  background-width: 100%;
-  background-height: 100%;
-  background-size: auto;*/
-  /*height: auto;*/
-  /*width: auto;*/
-}
-
 #files{
   width: 90%;
 }
@@ -70,7 +53,7 @@ video{
   background-repeat: no-repeat;
   background-size: 100%;
   /*position: absolute;*/
-  background-position: center;
+  background-position: 0px 0px;
   /*opacity: 1;*/
   /*z-index: -10000;*/
   /*z-index: 100;*/
@@ -345,6 +328,9 @@ video {
 .normal {
   font-weight: normal;
 }
+
+
+https://git.heroku.com/immense-bayou-4215.git (fetch)
 
 
 a{
