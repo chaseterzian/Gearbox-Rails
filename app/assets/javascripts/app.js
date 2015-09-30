@@ -493,13 +493,21 @@ function orientation(data, start, stop, dropDataPoints) {
 	  		ctx.scale(1,1);
 	  		ctx.translate(canvas.width/2, canvas.height/2);
 	  		ctx.rotate((Math.PI/180)*data[start][29]);
-	  		ctx.strokeStyle="black";
-	  		ctx.lineWidth = 1;
-	  		ctx.beginPath(); ctx.arc(0, 0, 325, 325, Math.PI, true); ctx.stroke();//COMPASS
-	  		ctx.beginPath(); ctx.arc(0, 0, 320, 320, Math.PI, true); ctx.stroke();//COMPASS
-	  		ctx.beginPath(); ctx.arc(0, 0, 315, 315, Math.PI, true); ctx.stroke();//COMPASS
-	  		ctx.beginPath(); ctx.arc(0, 0, 310, 310, Math.PI, true); ctx.stroke();//COMPASS
-	  		ctx.beginPath(); ctx.arc(0, 0, 305, 305, Math.PI, true); ctx.stroke();//COMPASS
+
+	  		// var compassCircles = [0,0,325,325, 0,0,320,320, 0,0,315,315,  0,0,310,310,  0,0,305,305,  0,0,300,300,  
+	  		// 					  0,0,295,295,  0,0,290,290,  0,0,285,285,  0,0,280,280];
+
+	  		// var pointsX = [-70,0, 70,0, -60,0, 60,0, -50,0, 50,0, -40,0, 40,0, -30,0, 30,0, -20,0, 20,0 -10,0, 10,0];
+
+	  		// var pointsY = [];
+
+	  			ctx.strokeStyle="black";
+	  			ctx.lineWidth = 1;
+	  			ctx.beginPath(); ctx.arc(0, 0, 325, 325, Math.PI, true); ctx.stroke();//COMPASS
+	  			ctx.beginPath(); ctx.arc(0, 0, 320, 320, Math.PI, true); ctx.stroke();//COMPASS
+	  			ctx.beginPath(); ctx.arc(0, 0, 315, 315, Math.PI, true); ctx.stroke();//COMPASS
+	  			ctx.beginPath(); ctx.arc(0, 0, 310, 310, Math.PI, true); ctx.stroke();//COMPASS
+	  			ctx.beginPath(); ctx.arc(0, 0, 305, 305, Math.PI, true); ctx.stroke();//COMPASS
 				ctx.beginPath(); ctx.arc(0, 0, 300, 300, Math.PI, true); ctx.stroke();//COMPASS
 				ctx.beginPath(); ctx.arc(0, 0, 295, 295, Math.PI, true); ctx.stroke();//COMPASS
 				ctx.beginPath(); ctx.arc(0, 0, 290, 290, Math.PI, true); ctx.stroke();//COMPASS
