@@ -308,7 +308,7 @@ function carMovementAndPositionVisuals(data, start, stop, multiX, multiY, multiZ
 											150,130,-150,150,-130,-35,130,35,-35,35,-35,-35,35,35,-105,-105,105,105,-105,-60,
 											105,60,-150,-105,-150,-105,-150,-105,150,105,150,105,150,105,-120,-120,-120,-120,120,120,
 											120,120,-60,-60,-30,-30,0,0,30,30,60,60,-115,-60,-100,-50,-100,-100,-65,-65,
-									  	-60,-50,115,60,100,50,100,100,65,65,60,50,-100,100,-85,85,-100,-85,100,85,
+									   		-60,-50,115,60,100,50,100,100,65,65,60,50,-100,100,-85,85,-100,-85,100,85,
 											-85,85,-100,100,-85,-100,85,100];
 				var pointsY = [-200,-200,-200,-200,-200,-200,-200,-190,-200,-190,-100,-200,-100,-200,310,-100,310,-100,310,350,
 											310,350,310,310,350,350,350,350,330,330,330,350,330,350,280,-77,280,-77,-77,-180,
@@ -317,8 +317,8 @@ function carMovementAndPositionVisuals(data, start, stop, multiX, multiY, multiZ
 											290,310,290,290,310,310,290,310,290,310,290,310,-40,-40,30,30,-40,30,-40,30,
 											170,170,260,260,170,260,170,260];
 				var wheels = [0,30,150,0,  0,-40,150,0,  -140,-50,33,33,  -140,-50,30,30,  140,-50,33,33,  140,-50,30,30, 
-										-140,275,33,33,  -140,275,30,30,  140,275,33,33,  140,275,30,30,  
-										-140,-50,32,32,  140,-50,32,32,  -140,275,32,32, 140,275,32,32];
+										    -140,275,33,33,  -140,275,30,30,  140,275,33,33,  140,275,30,30,  
+										    -140,-50,32,32,  140,-50,32,32,  -140,275,32,32, 140,275,32,32];
 					for (var i=0; i<pointsX.length; i=i+2){
 						if(i>91 && i<=107) { ctx.lineWidth = 5; }
 						if(i>71 && i<=91) { ctx.lineWidth = 2; }
@@ -388,7 +388,7 @@ function carModelFromBack(data, start, stop, multiX, multiY, multiZ, dropDataPoi
 				if (i>71 && i<=79) { ctx.lineWidth = 2; }
 				if (i>79 && i<=87) { ctx.lineWidth = 5; }
 				if (i>87 && i<=99) { ctx.lineWidth = 2; }
-					ctx.beginPath(); ctx.lineTo(pointsX[i], pointsY[i]); ctx.lineTo(pointsX[i+1], pointsY[i+1]); ctx.stroke(); ctx.closePath();
+				ctx.beginPath(); ctx.lineTo(pointsX[i], pointsY[i]); ctx.lineTo(pointsX[i+1], pointsY[i+1]); ctx.stroke(); ctx.closePath();
 			}
 
 			if (data[start][1] < -redlineY) { ctx.strokeStyle=("red"); ctx.fillStyle=("red"); }
@@ -431,6 +431,13 @@ function steeringWheelModel(data, start, stop, multiX, multiY, multiZ, dropDataP
 				dataStableY = dataStableY/visualsStablilizerNumber;
 				dataStableZ = dataStableZ/visualsStablilizerNumber;
 
+			var pointsArc = [0,0,325,325,  0,0,320,320,  0,0,315,315,  0,0,310,310,  0,0,305,305,  
+							 0,0,300,300,  0,0,295,295,  0,0,290,290,  0,0,285,285,  0,0,280,280];
+			
+			var pointsXy = [-295,-40,295,40,  -295,-30,295,30,  -295,-20,295,20, -295,-10,295,10,  -295,0,295,0,
+							20,297,20,0,  10,297,10,0,  0,297,0,0,  -10,297,-10,0,  -20,297,-20,0,
+							-150,0,-20,150,  -140,0,-20,-140,  -130,0,-20,130,  -120,0,-20,120,  -110,0,-20,110];
+
 
 			ctx.canvas.width  = window.innerWidth;
 	  		ctx.canvas.height = 800;//window.innerHeight;
@@ -438,17 +445,19 @@ function steeringWheelModel(data, start, stop, multiX, multiY, multiZ, dropDataP
 	  		ctx.translate(canvas.width/2, canvas.height/2);
 	  		ctx.rotate(dataStableX/2);
 	  		ctx.strokeStyle="black";
-	  		ctx.lineWidth = 3;
-					ctx.beginPath(); ctx.arc(0, 0, 325, 325, Math.PI, true); ctx.stroke();
-	  		ctx.beginPath(); ctx.arc(0, 0, 320, 320, Math.PI, true); ctx.stroke();
-	  		ctx.beginPath(); ctx.arc(0, 0, 315, 315, Math.PI, true); ctx.stroke();
-	  		ctx.beginPath(); ctx.arc(0, 0, 310, 310, Math.PI, true); ctx.stroke();
-	  		ctx.beginPath(); ctx.arc(0, 0, 305, 305, Math.PI, true); ctx.stroke();
+	
+		  		ctx.lineWidth = 3;
+				ctx.beginPath(); ctx.arc(0, 0, 325, 325, Math.PI, true); ctx.stroke();
+	  			ctx.beginPath(); ctx.arc(0, 0, 320, 320, Math.PI, true); ctx.stroke();
+	  			ctx.beginPath(); ctx.arc(0, 0, 315, 315, Math.PI, true); ctx.stroke();
+	  			ctx.beginPath(); ctx.arc(0, 0, 310, 310, Math.PI, true); ctx.stroke();
+	  			ctx.beginPath(); ctx.arc(0, 0, 305, 305, Math.PI, true); ctx.stroke();
 				ctx.beginPath(); ctx.arc(0, 0, 300, 300, Math.PI, true); ctx.stroke();
 				ctx.beginPath(); ctx.arc(0, 0, 295, 295, Math.PI, true); ctx.stroke();
 				ctx.beginPath(); ctx.arc(0, 0, 290, 290, Math.PI, true); ctx.stroke();
 				ctx.beginPath(); ctx.arc(0, 0, 285, 285, Math.PI, true); ctx.stroke();
 				ctx.beginPath(); ctx.arc(0, 0, 280, 280, Math.PI, true); ctx.stroke();
+				
 				ctx.lineWidth = 3;
 				ctx.beginPath(); ctx.lineTo(-295,-40); ctx.lineTo(295,-40); ctx.stroke(); ctx.closePath();//X
 				ctx.beginPath(); ctx.lineTo(-295,-30); ctx.lineTo(295,-30); ctx.stroke(); ctx.closePath();
@@ -466,7 +475,7 @@ function steeringWheelModel(data, start, stop, multiX, multiY, multiZ, dropDataP
 				ctx.beginPath(); ctx.lineTo(-140,0); ctx.lineTo(-20,140); ctx.stroke(); ctx.closePath();
 				ctx.beginPath(); ctx.lineTo(-130,0); ctx.lineTo(-20,130); ctx.stroke(); ctx.closePath();
 				ctx.beginPath(); ctx.lineTo(-120,0); ctx.lineTo(-20,120); ctx.stroke(); ctx.closePath();
-				ctx.beginPath(); ctx.lineTo(-110,0); ctx.lineTo(-20,110); ctx.stroke(); ctx.closePath();
+				ctx.beginPath(); ctx.lineTo(-110,0); ctx.lineTo(-20,110); ctx.stroke(); ctx.closePath();//STOPPED REFACTOR POINTS ON PLANE
 
 				ctx.beginPath(); ctx.lineTo(150,0); ctx.lineTo(20,150); ctx.stroke(); ctx.closePath();
 				ctx.beginPath(); ctx.lineTo(140,0); ctx.lineTo(20,140); ctx.stroke(); ctx.closePath();
