@@ -1,4 +1,4 @@
-WARNING: Use with Chrome
+Supported and tested on Chrome and Firefox
 
 
 Currently in development: Gearbox is a car metrics application that allows you to interpret drving and location data gathered from various sensors in your smartphone. Weather it's fast lap times you're after, new driver saftey concers you have, or perhaps you're just curious, Gearbox is a fun and accurate way for you to see what's on your cars mind.
