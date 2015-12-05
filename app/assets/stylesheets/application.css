@@ -158,20 +158,28 @@ video {
   /*box-shadow: 8px 3px 3px gray;*/
   float: right;
 }
-
 .right{
   float: right;
 }
 .param-inputs{
   /*border-top: 20px;*/
 }
-
 #demo-movie-div {
   display: hide;
 }
 
 .pad-top{
   padding-top: 5px;
+}
+.pad2{
+  padding-left: 2%; 
+}
+.pad5{
+  padding-left: 5%;
+}
+.pad10{
+  padding-left: 10%;
+
 }
 .col-half{
   /*width: 5%;*/
@@ -233,7 +241,6 @@ video {
   float: left;
   /*border: 1px solid red;*/
 }
-
 .col-3{
   /*width: 25%;*/
   width: 24.9%;
@@ -252,14 +259,12 @@ video {
   float: left;
   /*border: 1px solid red;*/
 }
-
 .col-30{
   /*width: 26.6%;*/
   width: 26.45%;
   float: left;
   /*border: 1px solid red;*/
 }
-
 .col-4{
   /*width: 33.33333%;*/
   width: 33.3%;
@@ -287,7 +292,6 @@ video {
   float: left;
 /*border: 1px solid red;*/
 }
-
 .col-7minus{
   width: 54.5%;
   float: left;
@@ -320,12 +324,16 @@ video {
   /*border: 1px solid red;*/
 }
 
+
+
 .space {
   padding-bottom: 5px;
 }
+
 .bold {
   font-weight: bold;
 }
+
 .normal {
   font-weight: normal;
 }
