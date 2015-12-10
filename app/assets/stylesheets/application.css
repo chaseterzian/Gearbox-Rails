@@ -181,11 +181,11 @@ video {
   padding-left: 10%;
 
 }
-.col-half{
-  /*width: 5%;*/
-  width: 4.9%;
+.col-left-space{
+  width: 4%;
   float: left;
-  /*border: 1px solid red;*/
+  border: 1px solid transparent;
+
 }
 .col-half{
   /*width: 5%;*/
@@ -246,6 +246,12 @@ video {
   width: 24.9%;
   float: left;
   border: 1px solid transparent;
+}
+.col-33{
+  width: 20.9%;
+  float: left;
+  border: 1px solid transparent;
+
 }
 .col-35{
   /*width: 30%;*/
