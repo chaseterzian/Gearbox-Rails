@@ -88,7 +88,7 @@ $(document).ready(function() {
 		// 0,1,2,3,4,5,6,7,8,9,10
 		carModelFromBack(dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 20);
 		// 0,1,2,3,4,5,6,7,8,9,10
-		steeringWheelModel(dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 15);
+		// steeringWheelModel(dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 15);
 		// 0,1,2,3,4,5,6,10
 		orientation(dataDownFlagstaff1, 0, 18000, 5);
 		// 0,1,2,6
@@ -96,6 +96,7 @@ $(document).ready(function() {
 		// 0,1,2,3,4,5,6,7,8,9,10
 		movementXy1Point(dataDownFlagstaff1, 0, 18000, 60, 60, 1, 5, 3, 25);
 		//0,1,2,3,4,6,7,8,10
+		movementXy1PointForTesting(dataDownFlagstaff1, 0, 18000, 60, 60, 1, 5, 3, 25);
 	});
 	$('form').on('submit', function(e) {
 		e.preventDefault();
@@ -166,10 +167,10 @@ $(document).ready(function() {
 					$('#report-button').fadeIn(2000);
 				}, 7000);
 
-			steeringWheelModel(parameterData[0], parameterData[1], 
-				parameterData[2], parameterData[3], 
-				parameterData[4], parameterData[5], 
-				parameterData[6], parameterData[10]); 
+			// steeringWheelModel(parameterData[0], parameterData[1], 
+			// 	parameterData[2], parameterData[3], 
+			// 	parameterData[4], parameterData[5], 
+			// 	parameterData[6], parameterData[10]); 
 			carModelFromBack(parameterData[0], parameterData[1], 
 				parameterData[2], parameterData[3], 
 				parameterData[4], parameterData[5], 
@@ -202,6 +203,11 @@ $(document).ready(function() {
 				parameterData[8], parameterData[9],
 				parameterData[10]);
 			movementXy1Point(parameterData[0], parameterData[1], 
+				parameterData[2], parameterData[3], 
+				parameterData[4], parameterData[6], 
+				parameterData[7], parameterData[8],
+				parameterData[10]);
+			movementXy1PointForTesting(parameterData[0], parameterData[1], 
 				parameterData[2], parameterData[3], 
 				parameterData[4], parameterData[6], 
 				parameterData[7], parameterData[8],

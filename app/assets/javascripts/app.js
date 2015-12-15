@@ -704,3 +704,48 @@ function movementXy1Point(data, start, stop, multiX, multiY, dropDataPoints, red
 			}, data[ii][31]*dropDataPoints);
 	}
 }
+/////////////////////////////////////////////////////////////////////////////
+function movementXy1PointForTesting(data, start, stop, multiX, multiY, dropDataPoints, redlineX, redlineY, visualsStablilizerNumber) {
+	var canvas = document.getElementById('canvas-gball2');
+	var ctx = canvas.getContext('2d');
+	var int = 0;
+	for (var x=start, ii=0; x<stop; x=x + dropDataPoints, ii=ii+1) {
+		setTimeout(function () {
+			var dataStableX = 0;
+			var dataStableY = 0;
+			var dataStableZ = 0;
+			var incForStable = 0;
+				while (incForStable < visualsStablilizerNumber) { 
+					dataStableX = dataStableX + data[start+incForStable][0];
+					dataStableY = dataStableY + data[start+incForStable][1];
+					dataStableZ = dataStableZ + data[start+incForStable][2];
+					incForStable++;
+				} 
+				dataStableX = dataStableX/visualsStablilizerNumber;
+				dataStableY = dataStableY/visualsStablilizerNumber;
+				dataStableZ = dataStableZ/visualsStablilizerNumber;
+
+			ctx.canvas.width  = window.innerWidth;
+			ctx.canvas.height = window.innerHeight;
+			ctx.scale(1,1);
+			ctx.translate(canvas.width/2, canvas.height/2);
+
+				ctx.lineWidth = 5;	
+				ctx.beginPath(); ctx.lineTo(-325,0); ctx.lineTo(325,0); ctx.stroke(); ctx.closePath(); 
+				ctx.beginPath(); ctx.lineTo(0,325); ctx.lineTo(0,-325); ctx.stroke(); ctx.closePath();
+
+				if (dataStableX >= redlineX || dataStableX < -redlineX) { ctx.fillStyle=("red"); }
+				if (dataStableY >= redlineY || dataStableY < -redlineY) { ctx.fillStyle=("red"); }
+				else { ctx.fillStyle=("black") }
+				ctx.beginPath(); ctx.arc(-dataStableX*multiX, dataStableY*multiY,30,30, Math.PI, true); ctx.fill(); ctx.closePath();
+				ctx.beginPath(); ctx.arc(-dataStableX*multiX, dataStableY*multiY,35,35, Math.PI, true); ctx.stroke(); ctx.closePath();
+
+				ctx.lineWidth = 20;	
+				ctx.beginPath(); ctx.arc(0, 0, 325, 325, Math.PI, true); ctx.stroke();
+	  			
+
+				start += dropDataPoints;
+				int += dropDataPoints;
+			}, data[ii][31]*dropDataPoints);
+	}
+}
