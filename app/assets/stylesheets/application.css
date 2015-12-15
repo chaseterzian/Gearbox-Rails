@@ -77,6 +77,25 @@ video{
   text-decoration: none;
 }
 
+.the-courier{
+  font-family: Courier New;
+}
+
+.long-button {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 15px;
+  background: #000000;
+  padding: 30px 10px 30px 10px;
+  /*border-right: solid #666666 0px;*/
+  /*border-bottom: solid #666666 0px;*/
+  /*border-left: solid #666666 0px;*/
+  text-decoration: none;
+}
+
 .btn2 {
   /*position: absolute;*/
   /*top: 10%;*/
@@ -197,7 +216,7 @@ video {
   /*width: 8.33333%;*/
   width: 8.3%;
   float: left;
-/*border: 1px solid red;*/
+border: 1px solid transparent;
 }
 .col-15{
   /*width: 8.33333%;*/
@@ -221,7 +240,7 @@ video {
   /*width: 16.66666%;*/
   width: 16.6%;
   float: left;
-  /*border: 1px solid;*/
+  border: 1px solid transparent;
 }
 .col-25{
   /*width: 20%;*/
@@ -263,8 +282,15 @@ video {
   /*width: 30%;*/
   width: 28.5%;
   float: left;
-  /*border: 1px solid red;*/
+  /*border: 1px solid black;*/
 }
+.col-36-border{
+  /*width: 30%;*/
+  width: 28.5%;
+  float: left;
+  border: 1px solid black;
+}
+
 .col-30{
   /*width: 26.6%;*/
   width: 26.45%;
@@ -306,8 +332,14 @@ video {
 .col-8{
   width: 66.66666%;
   float: left;
-/*border: 1px solid red;*/
+border: 1px solid transparent;
 }
+.col-8-plus{
+  width: 70%;
+  float: left;
+border: 1px solid transparent;
+}
+
 .col-9{
   /*width: 75.00%;*/
   width: 74.65%;

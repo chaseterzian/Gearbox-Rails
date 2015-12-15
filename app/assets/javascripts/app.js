@@ -200,14 +200,24 @@ function reportDetailsFull(data, start, stop, dropDataPoints, redlineX, redlineY
 
 				if (data[start][2] >= 2*g) {//BUMP
 					ctx.fillStyle=("red");
-					document.getElementById("text-div-report-full").innerHTML =
-					"- The car went over a large bump (" + data[start][2]/g + "m/s^2 toward the road)";
-					// $('#text-div-good-driver').hide();
+					fullReportDataStored.push(
+					"- The car went over a large bump (" + data[start][2]/g + "m/s^2 toward the road)");
+
+					var bumpInRoad = document.createElement('div');
+					bumpInRoad.innerHTML = "- The car went over a large bump (" + data[start][2]/g + "m/s^2 toward the road)";
+					document.getElementById("text-div-report-full").appendChild(bumpInRoad);		
+
+						
 				}
 				if (data[start][2] <= 0*g) {//AIRBORNE - BRAKS ON CIRCLE GRAPHIC
 					ctx.fillStyle=("red");
-					document.getElementById("text-div-report-full").innerHTML =
-					"- You are now airborne, goodnight";
+					fullReportDataStored.push(
+					"- You are now airborne, goodnight");
+						
+
+					var airborneGoodnight = document.createElement('div');
+					airborneGoodnight.innerHTML = "- You are now airborne, goodnight";
+					document.getElementById("text-div-report-full").appendChild(airborneGoodnight);		
 					// $('#text-div-good-driver').hide();
 				}
 				
@@ -226,11 +236,18 @@ function reportDetailsFull(data, start, stop, dropDataPoints, redlineX, redlineY
 						" m/s^2 - Time-in-ms/DataPoint - " +
 						data[start][31] + " sec / " + int;
 					document.getElementById("text-div-report-full").appendChild(hardLeft);		
+					// $('#text-div-good-driver').hide();
 				}
 				
 
 				if (-data[start][0] < -redlineX) {//HARD RIGHT
 					ctx.fillStyle=("red");
+					fullReportDataStored.push(
+						"- Hard right turn. (" +
+						data[start][0] +
+						" m/s^2 - Time-in-ms/DataPoint - " +
+						data[start][31] + " sec / " + int);
+
 					var hardRight = document.createElement('div');
 					hardRight.innerHTML =
 						"- Hard right turn. (" +
@@ -241,46 +258,94 @@ function reportDetailsFull(data, start, stop, dropDataPoints, redlineX, redlineY
 						// $('#text-div7').hide();
 						// $('#text-div-good-driver').hide();
 				}
+
 				if (data[start][1] <= -redlineY) {//BRAKING
 					ctx.fillStyle=("red");
-					document.getElementById("text-div-report-full").innerHTML =
-					"- Heavy braking event (" +
+					fullReportDataStored.push(
+						"- Heavy braking event (" +
 						data[start][1] +
 						" m/s^2 - Time-in-ms/DataPoint - " +
-						data[start][31] + " sec / " + int;
+						data[start][31] + " sec / " + int);
+
+						var heavyBraking = document.createElement('div');
+						heavyBraking.innerHTML =
+							"- Heavy braking event (" +
+							data[start][1] +
+							" m/s^2 - Time-in-ms/DataPoint - " +
+							data[start][31] + " sec / " + int;
+						document.getElementById("text-div-report-full").appendChild(heavyBraking);
 						// $('#text-div-good-driver').hide();
 				}
+
 				if (data[start][1] > redlineY) {//ACCELERATION
 					ctx.fillStyle=("red");
-					document.getElementById("text-div-report-full").innerHTML =
-					"- Heavy acceleration event (" +
+					fullReportDataStored.push(
+						"- Heavy acceleration event (" +
 						data[start][1] +
 						" m/s^2 - Time-in-ms/DataPoint - " +
-						data[start][31] + " sec / " + int;
+						data[start][31] + " sec / " + int);
+					
+						var heavyAccel = document.createElement('div');
+						heavyAccel.innerHTML =
+							"- Heavy acceleration event (" +
+							data[start][1] +
+							" m/s^2 - Time-in-ms/DataPoint - " +
+							data[start][31] + " sec / " + int;
+						document.getElementById("text-div-report-full").appendChild(heavyAccel);
 						// $('#text-div-good-driver').hide();
 				}
+
 				if (data[start][1] < -redlineY && data[start][0] > redlineX || data[start][1] < -redlineY && data[start][0] < -redlineX) {//HEAVY BRAKING
 					ctx.fillStyle=("red");
-					document.getElementById("text-div-report-full").innerHTML =
-					"***WARNING - Heavy braking combined with hard cornering: (" +
-						data[start][1] + "m/s^2 forward, and " + data[start][0] + "m/2^2 to the side, while moving at " + data[start][27] + " MPH. ";
+					fullReportDataStored.push(
+						"***WARNING - Heavy braking combined with hard cornering: (" +
+						data[start][1] + "m/s^2 forward, and " + data[start][0] + 
+						"m/2^2 to the side, while moving at " + data[start][27] + " MPH. ");
+
+					var brakingCornering = document.createElement('div');
+					brakingCornering.innerHTML =
+						"***WARNING - Heavy braking combined with hard cornering: (" +
+						data[start][1] + "m/s^2 forward, and " + data[start][0] + 
+						"m/2^2 to the side, while moving at " + data[start][27] + " MPH. ";
+					document.getElementById("text-div-report-full").appendChild(brakingCornering);
 						// $('#text-div-good-driver').hide();
 				}
+
 				if (data[start][1] > redlineY && data[start][0] >= redlineX || data[start][1] > redlineY && data[start][0] < -redlineX) {//HEAVY ACCELERATION
 					ctx.fillStyle=("red");
-					document.getElementById("text-div-report-full").innerHTML =
-					"***WARNING - Heavy acceleration combined with hard cornering: (" +
-						data[start][1] + "m/s^2 backward, and " + data[start][0] + " m/2^2 to the side, while moving at " + data[start][27] + " MPH."
+					fullReportDataStored.push(
+						"***WARNING - Heavy acceleration combined with hard cornering: (" +
+						data[start][1] + "m/s^2 backward, and " + data[start][0] + 
+						" m/2^2 to the side, while moving at " + data[start][27] + " MPH.");
+					
+					var accelCornering = document.createElement('div');
+					accelCornering.innerHTML =
+						"***WARNING - Heavy acceleration combined with hard cornering: (" +
+						data[start][1] + "m/s^2 backward, and " + data[start][0] + 
+						" m/2^2 to the side, while moving at " + data[start][27] + " MPH."
+					document.getElementById("text-div-report-full").appendChild(accelCornering);
 						// $('#text-div-good-driver').hide();
 				}
+
 				if (data[start][1] > 2*g) {//CRASH AUTO CONTACT HELP************
-					document.getElementById("text-div-report-full").innerHTML =
-					"***ACCIDENT WARNING: It seems that you may have been in an accident. Time: " + int;
-					$('#text-div-good-driver').hide();
+					fullReportDataStored.push(
+						"***ACCIDENT WARNING: It seems that you may have been in an accident. Time: " + int);
+
+					var frontEndCollision = document.createElement('div');
+					frontEndCollision.innerHTML =
+						"***ACCIDENT WARNING: It seems that you may have been in an accident. Time: " + int;
+					document.getElementById("text-div-report-full").appendChild(frontEndCollision);
+					// $('#text-div-good-driver').hide();
 				}
+
 				if (data[start][21] > 125) {//SOUND
-					console.log(data[start][21])
-					document.getElementById("text-div-report-full").innerHTML = "- With the stereo this high, you may not hear the horns of other cars";
+					fullReportDataStored.push(
+						"- With the stereo this high, you may not hear the horns of other cars");
+
+					var stereoVolume = document.createElement('div');
+					stereoVolume.innerHTML =
+						"- With the stereo this high, you may not hear the horns of other cars";
+					document.getElementById("text-div-report-full").appendChild(stereoVolume);
 				}
 
 				start += dropDataPoints;

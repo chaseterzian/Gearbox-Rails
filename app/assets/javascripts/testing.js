@@ -77,6 +77,7 @@ $(document).ready(function() {
 		$('video').toggle('show');
 		setTimeout(function() { 
 			$('video').get(0).play()
+			$('video').get(1).play()
 		}, 0);
 		carMovementInWords(dataDownFlagstaff1, 0, 18000, 5, 2, 3, 11, 10);
 		// 0,1,2,6,7,8,9,11
@@ -103,7 +104,7 @@ $(document).ready(function() {
 	});
 	$('form').on('submit', function(e) {
 		e.preventDefault();
-		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 30];//
+		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 50];//
 		var fileContents = [];
 		$('#run-program-button').show();
 		$('#parameter-input-submit-button').css("background-color", "gray");
@@ -227,12 +228,14 @@ $(document).ready(function() {
 			$('video').toggle('show');
 			setTimeout(function() { 
 				$('video').get(0).play()
+				$('video').get(1).play()
 			}, 0);
 		});
 	});
 	$('#report-button').on('click', function() {
 		$('datacontent').toggle('hide');
 		$('reportcontent').toggle('show');
+		$('video').show();
 		// forceXyzForReport(dataDownFlagstaff1, 0, 10000, 200, 200, 200, 1, 1);
 	});
 	

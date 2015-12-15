@@ -136,7 +136,7 @@
 
 <div class="col-12"></div>
 
-	<div class='col-3 hide-then-show' id='col-carmodelback'>
+	<div class='col-36-border hide-then-show' id='col-carmodelback'>
 			<div id="time-window" class='btn'></div>
 			<div id="sound-level-window" class='btn'></div>
 			<div id="altitude-window" class='btn'></div>
@@ -150,10 +150,9 @@
 			<div id="data-points-window" class='btn' ></div>
 	</div>
 
-		<div class='col-9'>
 
-			<div id="text-div-report" class="space"></div>
-			
+		<div class='col-8-plus'>
+			<div id="text-div-report" class="space btn hide-then-show"></div>
 			<canvas id="canvas">
 			</canvas>
 		</div>
@@ -165,10 +164,27 @@
 	<button class='btn' id='data-page'>Take Me Back To The Testing Area</button>
 	<button class='btn'>Export Data</button>
 	<hr>
-	<div class='col-5'>
+
+	<div class='col-4'>
 		<b><div class='btn' id="highest-all-axes-window"></div></b>
 		<canvas id="canvas-reportcontent">
 		</canvas>
+	</div>
+
+	<div class='col-3' id='reportcontent-video'>
+		<div class='btn center'>Reference Monitor</div>
+		<%= video_tag(["Flagstaff1.webm"], :size => "320x290", :controls => true) %>
+	</div>
+
+	<div class='col-5'>
+		<div class='btn center' id='canvas-accelerometer-label'>Accelerometer</div>
+		<canvas id='canvas-gball'>
+		</canvas>
+	</div>
+
+	<hr>
+
+	<div class='col-12'>
 		<div id="text-div-report-full" class="space"></div>
 		<!-- <div id='all-errors-switching'></div>
 		<div id='text-div-crash' class='space'></div>
@@ -183,11 +199,7 @@
 		<div id="text-div-heavy-acceleration" class="space"></div>
 		<div id="text-div-good-driver" class="space"></div> -->
 	</div>
-	<div class='col-7'>
-		<div class='btn center' id='canvas-accelerometer-label'>Accelerometer</div>
-		<canvas id='canvas-gball'>
-		</canvas>
-	</div>
+	
 </reportcontent>
 
 <instructionscontent>
