@@ -33,3 +33,27 @@ if (-data[start][0] >= redlineX) {//HARD LEFT
 				}
 
 				//one after the other reversed
+
+
+
+
+
+
+
+				if (-data[start][0] >= redlineX) {//HARD LEFT
+					ctx.fillStyle=("red");
+					fullReportDataStored.push(
+						"- Hard left turn. (" +
+						data[start][0] +
+						" m/s^2 - Time-in-ms/DataPoint - " +
+						data[start][31] + " sec / " + int);
+
+					var hardLeft = document.createElement('div');
+					hardLeft.innerHTML = 
+						"- Hard left turn. (" +
+						data[start][0] +
+						" m/s^2 - Time-in-ms/DataPoint - " +
+						data[start][31] + " sec / " + int;
+					document.getElementById("text-div-report-full").appendChild(hardLeft);		
+					// $('#text-div-good-driver').hide();
+				}///works but prints in reversed order, no overlap though
