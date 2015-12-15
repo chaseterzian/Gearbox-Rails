@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	//DURING PAGE LOAD
+	$(window).load(function() {
 		$('reportcontent').hide();
 		$('carmodeltop').hide();
 		$('carmodelback').hide();
@@ -9,6 +10,7 @@ $(document).ready(function() {
 		$('instructionscontent').hide();
 		$('#instructions-button').hide();
 		$('#instructions-button').css('background-color', 'red');
+	});
 
 	setTimeout(function() {
 		$('#instructions-button').fadeIn(300);
