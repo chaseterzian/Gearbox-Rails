@@ -84,6 +84,8 @@ $(document).ready(function() {
 		// 0,1,2,6,12
 		warningMessages(dataDownFlagstaff1, 0, 18000, 5, 2, 3, 11);
 		// 0,1,2,6,7,8,9
+		reportDetailsFull(dataDownFlagstaff1, 0, 18000, 100, 2, 3, 11);
+		// 0,1,2,6,7,8,9
 		carMovementAndPositionVisuals(dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 15);
 		// 0,1,2,3,4,5,6,7,8,9,10
 		carModelFromBack(dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 20);
@@ -97,10 +99,11 @@ $(document).ready(function() {
 		movementXy1Point(dataDownFlagstaff1, 0, 18000, 60, 60, 1, 5, 3, 25);
 		//0,1,2,3,4,6,7,8,10
 		movementXy1PointForTesting(dataDownFlagstaff1, 0, 18000, 60, 60, 1, 5, 3, 25);
+
 	});
 	$('form').on('submit', function(e) {
 		e.preventDefault();
-		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1];//
+		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 30];//
 		var fileContents = [];
 		$('#run-program-button').show();
 		$('#parameter-input-submit-button').css("background-color", "gray");
@@ -111,6 +114,7 @@ $(document).ready(function() {
 		var multiY=parseInt(document.getElementById('testing-input-multiy').value);
 		var multiZ=parseInt(document.getElementById('testing-input-multiz').value);
 		var dataPoints=parseInt(document.getElementById('testing-input-data-points').value);
+		var reportPoints=parseInt(document.getElementById('testing-input-report-points').value);
 		var redlineX=parseInt(document.getElementById('testing-input-redline-x').value);
 		var redlineY=parseInt(document.getElementById('testing-input-redline-y').value);
 		var redlineZ=parseInt(document.getElementById('testing-input-redline-z').value);
@@ -130,6 +134,7 @@ $(document).ready(function() {
 		if (dataStabilizerVisuals !== parameterData[10] && dataStabilizerVisuals > 0) { parameterData[10] = dataStabilizerVisuals; }
 		if (dataStabilizerWords !== parameterData[11] && dataStabilizerWords > 0) { parameterData[11] = dataStabilizerWords; }
 		if (dataStabilizerData !== parameterData[12] && dataStabilizerData > 0) { parameterData[12] = dataStabilizerData; }
+		if (reportPoints !== parameterData[13] && reportPoints > 0) { parameterData[13] = reportPoints; }
 
 		document.getElementById("set-parameters-window").innerHTML = "Profile Loaded";
 		document.getElementById("parameter-input-submit-button").innerHTML = "Run Program";
@@ -181,6 +186,10 @@ $(document).ready(function() {
 				parameterData[2], parameterData[6]);				
 			warningMessages(parameterData[0], parameterData[1], 
 				parameterData[2], parameterData[6],  
+				parameterData[7], parameterData[8], 
+				parameterData[9]);	
+			reportDetailsFull(parameterData[0], parameterData[1], 
+				parameterData[2], parameterData[13],  
 				parameterData[7], parameterData[8], 
 				parameterData[9]);	
 			carMovementAndPositionVisuals(parameterData[0], parameterData[1], 
@@ -257,6 +266,7 @@ $(document).ready(function() {
 	$('body').on('click', function() {
 		$('#instructions-button').css('background-color', 'black');	
 	});
+
 
 
 });

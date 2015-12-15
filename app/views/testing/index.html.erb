@@ -105,6 +105,7 @@
   	<input placeholder='MultiY Visuals' type='text' name='name' class='btn param-inputs' id='testing-input-multiy'></input>
   	<input placeholder='MultiZ Visuals' type='text' name='name' class='btn param-inputs' id='testing-input-multiz'></input>
   	<input placeholder='Skip Data Points' type='text' name='name' class='btn param-inputs' id='testing-input-data-points'></input>
+  	<input placeholder='Skip Report Points' type='text' name='name' class='btn param-inputs' id='testing-input-report-points'></input>
   	<input placeholder='Report Trip X' type='text' name='name' class='btn param-inputs' id='testing-input-redline-x'></input>
   	<input placeholder='Report Trip Y' type='text' name='name' class='btn param-inputs' id='testing-input-redline-y'></input>
   	<input placeholder='Report Trip Z' type='text' name='name' class='btn param-inputs' id='testing-input-redline-z'></input>
@@ -147,10 +148,12 @@
 			<div id="y-axis-window" class='btn' ></div>
 			<div id="z-axis-window" class='btn' ></div>
 			<div id="data-points-window" class='btn' ></div>
-		
 	</div>
 
 		<div class='col-9'>
+
+			<div id="text-div-report" class="space"></div>
+			
 			<canvas id="canvas">
 			</canvas>
 		</div>
@@ -163,7 +166,11 @@
 	<button class='btn'>Export Data</button>
 	<hr>
 	<div class='col-5'>
-		<div id='all-errors-switching'></div>
+		<b><div class='btn' id="highest-all-axes-window"></div></b>
+		<canvas id="canvas-reportcontent">
+		</canvas>
+		<div id="text-div-report-full" class="space"></div>
+		<!-- <div id='all-errors-switching'></div>
 		<div id='text-div-crash' class='space'></div>
 		<div id="text-div-airborne" class='space'></div>
 		<div id="text-div-bump" class="space"></div>
@@ -174,10 +181,7 @@
 		<div id="text-div-hard-right" class="space"></div>	
 		<div id="text-div-heavy-braking" class="space"></div>
 		<div id="text-div-heavy-acceleration" class="space"></div>
-		<div id="text-div-good-driver" class="space"></div>
-		<b><div class='btn' id="highest-all-axes-window"></div></b>
-		<canvas id="canvas-reportcontent">
-		</canvas>
+		<div id="text-div-good-driver" class="space"></div> -->
 	</div>
 	<div class='col-7'>
 		<div class='btn center' id='canvas-accelerometer-label'>Accelerometer</div>
