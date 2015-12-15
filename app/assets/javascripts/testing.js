@@ -85,7 +85,7 @@ $(document).ready(function() {
 		// 0,1,2,6,12
 		warningMessages(dataDownFlagstaff1, 0, 18000, 5, 2, 3, 11);
 		// 0,1,2,6,7,8,9
-		reportDetailsFull(dataDownFlagstaff1, 0, 18000, 100, 2, 3, 11);
+		reportDetailsFull(dataDownFlagstaff1, 0, 18000, 100, 1, 1, 8);
 		// 0,1,2,6,7,8,9
 		carMovementAndPositionVisuals(dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 15);
 		// 0,1,2,3,4,5,6,7,8,9,10
@@ -104,7 +104,7 @@ $(document).ready(function() {
 	});
 	$('form').on('submit', function(e) {
 		e.preventDefault();
-		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 50];//
+		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 30];//
 		var fileContents = [];
 		$('#run-program-button').show();
 		$('#parameter-input-submit-button').css("background-color", "gray");
