@@ -26,13 +26,13 @@ function carMovementInWords(data, start, stop, dropDataPoints, redlineX, redline
 				else if (dataStableX < -1) { document.getElementById("left-right-straight-window").innerHTML = "Turning Left"; }
 				else { document.getElementById("left-right-straight-window").innerHTML = "Driving Straight"; }
 
-				document.getElementById("and-window").innerHTML = " And "
+				// document.getElementById("and-window").innerHTML = " And "
 
-				if (-dataStableY > 6) { document.getElementById("braking-accelerating-in-words").innerHTML = "Braking Hard"; }//Y IS FLIPPED
-				else if (-dataStableY < -3) { document.getElementById("braking-accelerating-in-words").innerHTML = "Accelerating Quickly"; }//Y IS FLIPPED
-				else if (-dataStableY < -.8) { document.getElementById("braking-accelerating-in-words").innerHTML = "Accelerating"; }//Y IS FLIPPED
-				else if (-dataStableY > 1) { document.getElementById("braking-accelerating-in-words").innerHTML = "Braking"; }//Y IS FLIPPED
-				else { document.getElementById("braking-accelerating-in-words").innerHTML = "Coasting"; }
+				if (-dataStableY > 6) { document.getElementById("braking-accelerating-in-words").innerHTML = " And Braking Hard"; }//Y IS FLIPPED
+				else if (-dataStableY < -3) { document.getElementById("braking-accelerating-in-words").innerHTML = "And Accelerating Quickly"; }//Y IS FLIPPED
+				else if (-dataStableY < -.8) { document.getElementById("braking-accelerating-in-words").innerHTML = "And Accelerating"; }//Y IS FLIPPED
+				else if (-dataStableY > 1) { document.getElementById("braking-accelerating-in-words").innerHTML = "And Braking"; }//Y IS FLIPPED
+				else { document.getElementById("braking-accelerating-in-words").innerHTML = "And Coasting"; }
 				
 				} else {
 				document.getElementById("left-right-straight-window").innerHTML = "Stopped";
