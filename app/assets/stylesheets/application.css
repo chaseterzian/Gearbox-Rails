@@ -94,6 +94,7 @@ video{
   /*border-bottom: solid #666666 0px;*/
   /*border-left: solid #666666 0px;*/
   text-decoration: none;
+  top: 0;
 }
 
 .btn2 {
