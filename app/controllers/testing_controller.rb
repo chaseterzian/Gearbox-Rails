@@ -1,5 +1,4 @@
 class TestingController < ApplicationController
-	after_action :allow_iframe, only: :embed
 
 	def index
 	end
@@ -7,14 +6,7 @@ class TestingController < ApplicationController
 	def show
 	end
 
-	def embed
-  end
 
-private
-
-  def allow_iframe
-    response.headers.except! 'X-Frame-Options'
-  end
 	
 
 end
