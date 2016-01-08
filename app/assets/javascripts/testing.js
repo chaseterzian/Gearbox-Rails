@@ -2,12 +2,12 @@ $(document).ready(function() {
 
 	//DURING PAGE LOAD
 	$(window).load(function() {
-		$('reportcontent').hide();
+		$('#report-content').hide();
 		$('carmodeltop').hide();
 		$('carmodelback').hide();
 		$('wheelmodel').hide();
 		$('#run-program-button').hide();
-		$('instructionscontent').hide();
+		$('#instructions-content').hide();
 		$('#instructions-button').hide();
 		$('#instructions-button').css('background-color', 'red');
 	});
@@ -39,10 +39,7 @@ $(document).ready(function() {
 	$('html').fadeIn(2000);
 	$('.hide-then-show').hide('.hide-then-show');
 	
-	//POST PAGE LOAD
-	// $('#some-test-button').on('click', function() {
-	// 	reduce the amount of function called by loops OKAY
-	// });
+	
 	$('#show-all-data-button').on('click', function() {
 		$('.button-panel-right').css('text-align', 'right');
 		$('.home').toggle('hide');
@@ -233,8 +230,8 @@ $(document).ready(function() {
 		});
 	});
 	$('#report-button').on('click', function() {
-		$('datacontent').toggle('hide');
-		$('reportcontent').toggle('show');
+		$('#data-content').toggle('hide');
+		$('#report-content').toggle('show');
 		$('video').show();
 		// forceXyzForReport(dataDownFlagstaff1, 0, 10000, 200, 200, 200, 1, 1);
 	});
@@ -254,17 +251,17 @@ $(document).ready(function() {
 	});
 
 	$('#data-page').on('click', function() {
-		$('datacontent').toggle('show');
-		$('reportcontent').toggle('hide');
+		$('#data-content').toggle('show');
+		$('#report-content').toggle('hide');
 	});
 	$('#data-page2').on('click', function() {
-		$('datacontent').toggle('show');
-		$('instructionscontent').toggle('hide');
+		$('#data-content').toggle('show');
+		$('#instructions-content').toggle('hide');
 	});
 	$('#parameter-input-fields').css('text-align', 'right');
 	$('#instructions-button').on('click', function() {
-		$('datacontent').toggle('hide');
-		$('instructionscontent').toggle('show');
+		$('#data-content').toggle('hide');
+		$('#instructions-content').toggle('show');
 	});
 	$('body').on('click', function() {
 		$('#instructions-button').css('background-color', 'black');	
