@@ -38,8 +38,6 @@
 		<div><button class='btn' id='reset-button'>Reset</button></div>
 	</div>
 
-
-
 	<div class='col-33 hide-this'></div>
 
 	<div class='col-2 hide-this' id='parameter-input-column'>
@@ -67,8 +65,6 @@
 				<button class='btn center' id='run-program-button'>Run Program</button>
 			</div>
 		</form>
-		<!-- <div class='btn center'> -->
-		<!-- </div> -->
 	</div>
 
 	<div class='col-33 hide-this'></div>
@@ -80,8 +76,6 @@
 			<a href="/" class="btn home-fixed center shadow-r" id='home-button'>Home</a>
 		</div>
 	</div>
-
-
 
 	<div class="col-12"></div>
 
@@ -98,7 +92,6 @@
 		<div id="z-axis-window" class='btn' ></div>
 		<div id="data-points-window" class='btn' ></div>
 	</div>
-
 
 	<div class='col-8-plus'>
 		<div id="text-div-report" class="space btn hide-then-show"></div>
@@ -157,44 +150,43 @@
 		<button class='btn' id='data-page2'>Take Me Back To The Testing Area</button>
 		<hr>
 		<h4><strong><p>Currently in development. Gearbox is a car metrics application that allows you to interpret drving and location data gathered from various sensors on your smartphone. Weather it's fast lap times you're after, new driver saftey concers or maybe you're just curious, Gearbox is a fun and accurate way for you to see what's on your cars mind. 
-			To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'</p>
-			<p>OR, play with the data:</p>
-			<p>Input fields are able to accept user defined values for the function parameters (outlined below). Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  Click 'Show My Report' to see the data being logged that relates to your 'Report Trip' inputs, and at any time you may pause or reload the data stream. User CSV upload is currently under construction, but will be functional again shortly. If you forget how to log the data from your handset first, refer back to the readme in the program folder.</p>
+		To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'</p>
+		<p>OR, play with the data:</p>
+		<p>Input fields are able to accept user defined values for the function parameters (outlined below). Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  Click 'Show My Report' to see the data being logged that relates to your 'Report Trip' inputs, and at any time you may pause or reload the data stream. User CSV upload is currently under construction, but will be functional again shortly. If you forget how to log the data from your handset first, refer back to the readme <a href='https://github.com/chaseterzian/Gearbox-Rails/blob/master/README.rdoc'>here</a></p>
 
-			<p>User Defined Parameters:</p>
-			<p><input class='btn' placeholder='Start Time'></input>
-				Default: 0 - Start time in milliseconds.</p>
-				<p><input class='btn' placeholder='End Time'></input>
-					Default: 18000 - End time in milliseconds.</p>
-					<p><input class='btn' placeholder='MultiX Visuals'></input>
-						Default: 60 - The ammount of movement present in the images that correspond to the X axis of the accelerometer. (left and right latteral)</p>
-						<p><input class='btn' placeholder='MultiY Visuals'></input>
-							Default: 60 - The ammount of movement present in the images that correspond to the Y axis of the accelerometer. (braking and acceleration)</p>
-							<p><input class='btn' placeholder='MultiZ Visuals'></input>
-								Default: 2 - The ammount of movement present in the images that correspond to the Z axis of the accelerometer. (up and down, bumps and dips)</p>
-								<p><input class='btn' placeholder='Skip Data Points'></input>
-									Default: 5 - IMPORTANT TO FIX ANY LAG ISSUES YOU MAY BE EXPERIENCING - This will cause the application to interpret only every N'th data point, while allowing the information to continue to be presented without distorting time.</p>
-									<p><input class='btn' placeholder='Report Trip X'></input>
-										Default: 2 - The number N entered represents N meters/second^2. When the force in the X direction (lateral force on the car) exceeds this number, the data will be dynamically printed in the 'Show My Report' section. Certain images related to turning and lateral force will also become red.</p>
-										<p><input class='btn' placeholder='Report Trip Y'></input>
-											Default: 3 - Report Trip Y: The number N entered represents N meters/second^2.  When the force in the Y direction (braking and acceleration) exceeds this number, the the data will be dynamically printed in the "Show My Report" section.  Certain images related to braking will also become red. </p>
-											<p><input class='btn' placeholder='Report Trip Z'></input>
-												Default: 12 - Report Trip Z: The number N entered represents N meters/second^2.  When the force in the Z direction (bumps and dips) exceeds this number, the data will be dynamically printed in the "Show My Report" section. Certain images related to bumps and dips will also become red.</p>
-												<p><input class='btn' placeholder='Stabilizer Visuals'></input>
-													Default: 1 - The sensors on your smartphone are extremely sensitive. As a result, the different respresentations of the data can appear to be very jerky, and in some cases difficult to read or interpret.  The higher the number entered into this field, the more stable the graphic respresentations (car and orientation drawings) of the data become.  Although a higher number will produce 'cleaner' results, the data will be slightly less accurate as the number increases.  Certain data including time, speed, and location will not be affected. Recommend less than 50.</p>
-													<p><input class='btn' placeholder='Stabilizer Words'></input>
-														Default: 1 - The higher the number entered into this field, the more stable the word print-outs become('driving straight' etc).  Recommend less than 50.</p>
-														<p><input class='btn' placeholder='Stabilizer Data'></input>
-															Default: 1 - The higher the number entered into this field, the more stable the data print-outs become(X, Y, Z accelerometer data etc).  Recommend less than 50.</p>
+		<p>User Defined Parameters:</p>
+		<p><input class='btn' placeholder='Start Time'></input>
+		Default: 0 - Start time in milliseconds.</p>
+		<p><input class='btn' placeholder='End Time'></input>
+		Default: 18000 - End time in milliseconds.</p>
+		<p><input class='btn' placeholder='MultiX Visuals'></input>
+		Default: 60 - The ammount of movement present in the images that correspond to the X axis of the accelerometer. (left and right latteral)</p>
+		<p><input class='btn' placeholder='MultiY Visuals'></input>
+		Default: 60 - The ammount of movement present in the images that correspond to the Y axis of the accelerometer. (braking and acceleration)</p>
+		<p><input class='btn' placeholder='MultiZ Visuals'></input>
+		Default: 2 - The ammount of movement present in the images that correspond to the Z axis of the accelerometer. (up and down, bumps and dips)</p>
+		<p><input class='btn' placeholder='Skip Data Points'></input>
+		Default: 5 - IMPORTANT TO FIX ANY LAG ISSUES YOU MAY BE EXPERIENCING - This will cause the application to interpret only every N'th data point, while allowing the information to continue to be presented without distorting time.</p>
+		<p><input class='btn' placeholder='Report Trip X'></input>
+		Default: 2 - The number N entered represents N meters/second^2. When the force in the X direction (lateral force on the car) exceeds this number, the data will be dynamically printed in the 'Show My Report' section. Certain images related to turning and lateral force will also become red.</p>
+		<p><input class='btn' placeholder='Report Trip Y'></input>
+		Default: 3 - Report Trip Y: The number N entered represents N meters/second^2.  When the force in the Y direction (braking and acceleration) exceeds this number, the the data will be dynamically printed in the "Show My Report" section.  Certain images related to braking will also become red. </p>
+		<p><input class='btn' placeholder='Report Trip Z'></input>
+		Default: 12 - Report Trip Z: The number N entered represents N meters/second^2.  When the force in the Z direction (bumps and dips) exceeds this number, the data will be dynamically printed in the "Show My Report" section. Certain images related to bumps and dips will also become red.</p>
+		<p><input class='btn' placeholder='Stabilizer Visuals'></input>
+		Default: 1 - The sensors on your smartphone are extremely sensitive. As a result, the different respresentations of the data can appear to be very jerky, and in some cases difficult to read or interpret.  The higher the number entered into this field, the more stable the graphic respresentations (car and orientation drawings) of the data become.  Although a higher number will produce 'cleaner' results, the data will be slightly less accurate as the number increases.  Certain data including time, speed, and location will not be affected. Recommend less than 50.</p>
+		<p><input class='btn' placeholder='Stabilizer Words'></input>
+		Default: 1 - The higher the number entered into this field, the more stable the word print-outs become('driving straight' etc).  Recommend less than 50.</p>
+		<p><input class='btn' placeholder='Stabilizer Data'></input>
+		Default: 1 - The higher the number entered into this field, the more stable the data print-outs become(X, Y, Z accelerometer data etc).  Recommend less than 50.</p>
+		<p><input value='Load Profile' class='btn'></input>
+		Push this button after entering your custom parameters.  If any fields are left blank, they will use the default values so you may pick and choose which custom parameters you would like to test with</p>
+		<p><button class='btn center' id='run-program-button'>Run Program</button>
+		This will run the program</p>
+		<p>The demo data presented was previously logged by myself but you may import your own data, or set your own parameters for the default demo data. :)</p></strong>
+		<p>Have fun, Chase</p></h4>
+		<hr>
 
-															<p><input value='Load Profile' class='btn'></input>
-																Push this button after entering your custom parameters.  If any fields are left blank, they will use the default values so you may pick and choose which custom parameters you would like to test with</p>
-																<p><button class='btn center' id='run-program-button'>Run Program</button>
-																	This will run the program</p>
-																	<p>The demo data presented was previously logged by myself but you may import your own data, or set your own parameters for the default demo data. :)</p></strong>
-																	<p>Have fun, Chase Terzian</p></h4>
-																	<hr>
+	</div>
 
-																</div>
-
-															</instructionscontent>
+</instructionscontent>
