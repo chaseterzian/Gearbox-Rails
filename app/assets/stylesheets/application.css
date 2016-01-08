@@ -21,6 +21,8 @@ body{
 }
 
 video{
+  display: none;
+  width: 100%;
   position: center;
 }
 
@@ -115,9 +117,9 @@ video{
   text-decoration: none;
 }
 
-video {
+/*video {
   display: none;
-}
+}*/
 
 #button-panel{
   padding-top: 100px;
