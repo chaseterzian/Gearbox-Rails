@@ -304,6 +304,12 @@ border: 1px solid transparent;
   float: left;
   /*border: 1px solid red;*/
 }
+.col-4-alt{
+  width: 33.3%;
+  float: left;
+  border: 1px solid transparent;
+}
+
 .col-5{
   /*width: 41.66666%;*/
   width: 41.6%;
@@ -351,6 +357,11 @@ border: 1px solid transparent;
   width: 83.33333%;
   float: left;
 /*border: 1px solid red;*/
+}
+.col-10-alt{
+  width: 83.33333%;
+  float: left;
+  border: 1px solid transparent;
 }
 .col-11{
   width: 91.66666%;
@@ -497,3 +508,7 @@ button{
   background-color: black;
   border-color: black;
 }
+/*.text-bottom{
+  position: absolute;
+  bottom: 5px;
+}*/
