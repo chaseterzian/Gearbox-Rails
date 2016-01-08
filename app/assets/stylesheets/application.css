@@ -166,6 +166,10 @@ video {
   padding-left: 10%;
 }
 
+.pad10r{
+  padding-right: 10%;
+}
+
 .col-left-space{
   width: 4%;
   float: left;

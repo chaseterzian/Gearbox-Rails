@@ -39,7 +39,6 @@ $(document).ready(function() {
 	$('html').fadeIn(2000);
 	$('.hide-then-show').hide('.hide-then-show');
 	
-	
 	$('#show-all-data-button').on('click', function() {
 		$('.button-panel-right').css('text-align', 'right');
 		$('.home').toggle('hide');
@@ -101,7 +100,7 @@ $(document).ready(function() {
 	});
 	$('form').on('submit', function(e) {
 		e.preventDefault();
-		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 30];//
+		var parameterData = [dataDownFlagstaff1, 0, 18000, 60, 60, 2, 5, 2, 3, 11, 1, 1, 1, 30];
 		var fileContents = [];
 		$('#run-program-button').show();
 		$('#parameter-input-submit-button').css("background-color", "gray");
@@ -119,7 +118,7 @@ $(document).ready(function() {
 		var dataStabilizerVisuals=parseInt(document.getElementById('testing-input-data-stabilizer').value);
 		var dataStabilizerWords=parseInt(document.getElementById('testing-input-words-stabilizer').value);
 		var dataStabilizerData=parseInt(document.getElementById('testing-input-data-stabilizer-data').value);
-		fileContents.push(document.getElementById('testing-input-file-contents').value);
+		// fileContents.push(document.getElementById('testing-input-file-contents').value);
 		if (startInput !== parameterData[1] && startInput > 0) { parameterData[1] = startInput; }
 		if (endInput !== parameterData[2] && endInput > 0) { parameterData[2] = endInput; }
 		if (multiX !== parameterData[3] && multiX > 0) { parameterData[3] = multiX; }
