@@ -1,19 +1,21 @@
 Supported and tested on Chrome and Firefox
 
 
-Currently in development: Gearbox is a car metrics application that allows you to interpret drving and location data gathered from various sensors in your smartphone. Weather it's fast lap times you're after, new driver saftey concers you have, or perhaps you're just curious, Gearbox is a fun and accurate way for you to see what's on your cars mind.
+Always in development: Gearbox is a car metrics application that allows you to interpret drving and location data gathered from various sensors in your smartphone.  Wheather you're looking to improve your racing skills, test the quality of a roadway, or anything in-between, Gearbox is a fun and accurate way to analyze your vehicles every move.  View and manipulate the data in a number of useful ways, customize and dynamically print reports of the behavior of your vehicle, even upload a video for reference. (Available sensor data listed at the bottom of this document)
+    
+  Want to skip the complicated stuff and go strait for a demo? Once you enter the site, you will see a button on the left that says "Demo All Data". This will allow you to see the program run with a preloaded set of data, and without having to enter setup parameters in the input fields.
 
-1 - Clone the app
 
-2 - Navigate to the 'Gearbox' folder and open
 
-3 - Double click on the 'Gearbox' Icon to start the app
+1 - **YOU WILL ONLY NEED TO FOLLOW THE SETUP PROCEDURE FOR YOUR HANDSET ONCE**
 
-***Gathering your own data requires a download from the Google Play Store onto your Android handset. To skip this process for now, go to the instructions after the horizontal line (below) and you will see information about how to activate the demo.***
+2 - ***Gathering your own data requires a download from the Google Play Store onto your Android handset. ***
 
-4 - Download AndroSensor (one time setup)
+3 - navigate to the Google play store
 
-5 - Go to settings and scroll down to Active Sensors.  Uncheck BATTERY STATUS, GPS NMEA $GPGGA, and GPS NMEA*, click ok.
+4 - Download AndroSensor
+
+5 - Go to settings (top right) and scroll down to Active Sensors.  Uncheck BATTERY STATUS, GPS NMEA $GPGGA, and GPS NMEA*, click ok.
 
 6 - (Scroll to the top) Set desired language and font size
 
@@ -47,22 +49,32 @@ Currently in development: Gearbox is a car metrics application that allows you t
 
 21 - SET RECORDING INTERVAL TO (.01 s) - YOU MAY HAVE CHECK THE 'fast' BOX
 
-22 - You will be presented with several different options to save the exported sensor data.  You can either auto-email the CSV, or have it saved locally to the phone.  Select destination for the file to be saved.
+22 - You will be presented with several different options to save and export the sensor data in CSV format.  You can either auto-email the CSV, or have it saved locally to the phone.  Make your choice, you are not limited to only one option.
 
 23 - Exit settings
 
-13 - Pressing the down arrow next to the wrench at the top of the app will open a small side window that allows you to start logging data.  Place the handset on a flat and secure (enough) surface so it doesn't move around, and start logging data (click red record button) when ready.
 
-14 - Upload CSV file (and optional video) to Gearbox and see instructions page on how to use the gearbox app tools.  Have fun! 
+***START LOGGING DATA***
 
-NOTE: email chaseterzian@gmail.com with support requests for different data logging apps
-____________________________________________________________________________________________________________
+24 - Pressing the down arrow next to the wrench at the top of the app will open a small side window that allows you to start logging data.  Place the handset on a flat and secure (enough) surface so it doesn't move around, and click red record button when ready.
 
-To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'. If you get stuck, see 'Instructions' located at the top right side of the 'Testing Area' after you enter the site.
+25 - When you are done logging data, hit the red stop button and the CSV will be saved/uploaded automatically.  
+	Later on you will be able to choose start and stop times to view your data, but I recommend splitting your sessions up into smaller chunks.  
+  		Although Gearbox is meant for cars, feel free to strap your handset to an ATV or mountain bike and see what happens, after all, Gearbox started with a swingset, and a little curiocity!
 
-OR play with the data:
+14 - Upload CSV file (and optional video) to Gearbox and see instructions page on how to use the app tools. 
 
-The input fields in the middle of the screen are able to accept user defined values, which are outlined in the 'Instructions' section in the Gearbox app. Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  At any time you may pause or reload the data stream. You can also click 'Show My Report' to see the data being dynamically generated that relates to your 'Report Trip' inputs. User CSV upload is currently under construction, but will be functional again shortly. See 'Instructions' located at the top right side of the 'Testing Area' for further information.
+NOTE: email chaseterzian@gmail.com with questions or support requests for different data logging apps
+
+
+
+***PLAY WITH THE DATA***
+
+The input fields in the middle of the screen are able to accept user defined values, which control many different functions, and are outlined in the 'Instructions' section in the Gearbox app. Don't worry about leaving certain fields (or all) blank - they will automatically use the fallback settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  At any time you may pause or reload the data stream. You can also click 'Show My Report' to see the data being dynamically generated that relates to your 'Report Trip' inputs. 
+
+***User CSV upload is currently under construction, but will be functional again shortly. See 'Instructions' located at the top right side of the 'Testing Area' for further information.***
+
+
 
 Available Sensor Data:
 _____________________
@@ -174,5 +186,4 @@ NaN
 
 Fiv Asim, developer of AndroSensor
 http://www.superiorwallpapers.com/ for the Testing Area image
-http://www.lughertexture.com for the landing area image
 (Powered By Android:)
