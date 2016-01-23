@@ -15,32 +15,54 @@ Currently in development: Gearbox is a car metrics application that allows you t
 
 5 - Go to settings and scroll down to Active Sensors.  Uncheck BATTERY STATUS, GPS NMEA $GPGGA, and GPS NMEA*, click ok.
 
+6 - (Scroll to the top) Set desired language and font size
+
 6 - Set Distance Unit to imperial
 
-7 - Set Location to n.n N/S - e.e W/E
+8 - Set GYROSCOPE to rad/s
 
-8 - Set Speed Unit to miles per hour
+9 - Set desired temperature setting
 
-9 - Set Sound Level Calibration to 80 dB
+10 - Set luminocity unit to lux
 
-10 - Set File Format to CSV, and check the comma box
+11 - Set atmospheric pressure unit to hPa
 
-11 - Select destination for the file to be saved (email handset etc.)
+12 - Set Location to n.n N/S - e.e W/E
 
-12 - Exit settings
+13 - Set accelerometer coordinates to device coordinates
 
-13 - Pressing the down arrow next to the wrench at the top of the app will open a small side window that allows you to start logging data.  Place the handset on a flat and secure (enough) surface so it doesn't move around, and start logging data when ready.
+14 - Set speed unit to miles per hour
 
-14 - Upload CSV file (and optional video) to Gearbox and have fun! 
+15 - Set graph height to small
+
+16 - Set graph values to 100
+
+17 - Set barometer altitude to disabled
+
+18 - Scroll down and check 'lock orientation' and 'keep screen on'
+
+19 - Set Sound Level Calibration to 80 dB
+
+20 - Set File Format to CSV, and check the ',' box
+
+21 - SET RECORDING INTERVAL TO (.01 s) - YOU MAY HAVE CHECK THE 'fast' BOX
+
+22 - You will be presented with several different options to save the exported sensor data.  You can either auto-email the CSV, or have it saved locally to the phone.  Select destination for the file to be saved.
+
+23 - Exit settings
+
+13 - Pressing the down arrow next to the wrench at the top of the app will open a small side window that allows you to start logging data.  Place the handset on a flat and secure (enough) surface so it doesn't move around, and start logging data (click red record button) when ready.
+
+14 - Upload CSV file (and optional video) to Gearbox and see instructions page on how to use the gearbox app tools.  Have fun! 
 
 NOTE: email chaseterzian@gmail.com with support requests for different data logging apps
 ____________________________________________________________________________________________________________
 
-To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'. If you get stuck, see 'Instructions' located at the top right side of the 'Testing Area' after you enter the garage.
+To see a quick demonstration of current functionality, press 'Demo All Data' on the left side of the 'Testing Area'. If you get stuck, see 'Instructions' located at the top right side of the 'Testing Area' after you enter the site.
 
 OR play with the data:
 
-The input fields in the middle of the screen are able to accept user defined parameter values, which are outlined in the 'Instructions' section. Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  At any time you may pause or reload the data stream. You can also click 'Show My Report' to see the data being logged that relates to your 'Report Trip' inputs. User CSV upload is currently under construction, but will be functional again shortly. See 'Instructions' located at the top right side of the 'Testing Area' for further information.
+The input fields in the middle of the screen are able to accept user defined values, which are outlined in the 'Instructions' section in the Gearbox app. Don't worry about leaving certain fields (or all) blank; they will automatically use the default settings. Feel free to move back and forth between the different rooms in the Testing Area without affecting the data flow.  At any time you may pause or reload the data stream. You can also click 'Show My Report' to see the data being dynamically generated that relates to your 'Report Trip' inputs. User CSV upload is currently under construction, but will be functional again shortly. See 'Instructions' located at the top right side of the 'Testing Area' for further information.
 
 Available Sensor Data:
 _____________________
